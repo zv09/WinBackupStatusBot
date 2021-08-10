@@ -1,5 +1,5 @@
 ﻿
-. C:\Users\Администратор\Documents\scripts\TelegramBotSettings.ps1   #Load file with your personal Telegram credentials
+. C:\Users\Администратор\Documents\GitHub\WinBackupStatusBot\TelegramBotSettings.ps1   #Load file with your personal Telegram credentials
 
 function Tg-SendMessage #Telegram messaging gadget scripted on PowerShell
 { 
