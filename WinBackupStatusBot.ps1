@@ -30,7 +30,7 @@ $FilterEvents = "
 <QueryList>
   <Query Id='0' Path='Microsoft-Windows-Backup'>
     <Select Path='Microsoft-Windows-Backup'>    
-        *[System[Provider[@Name='Microsoft-Windows-Backup'] and (EventID=1 or EventID=14) and TimeCreated[timediff(@SystemTime) &lt; 120000]]]
+        *[System[Provider[@Name='Microsoft-Windows-Backup'] and (EventID=1 or EventID=14) and TimeCreated[timediff(@SystemTime) &lt;=120000]]]
     </Select>
   </Query>
 </QueryList>"
