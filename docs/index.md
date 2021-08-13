@@ -2,7 +2,7 @@
 
 
 
- ### [Description and Documentation](https://zv09.github.io/WinBackupStatusBot/#Documentation)
+# Description and Documentation
 
 *  [WinBackupStatusBot description](https://zv09.github.io/WinBackupStatusBot/#description)
 *  [Undestanding workflow](https://zv09.github.io/WinBackupStatusBot/#workflow)
