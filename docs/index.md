@@ -1,7 +1,8 @@
 # Documentation will be uploaded soon within 2 days ...
 
 
-# Description and Documentation
+
+<h1 align="center"># Description and Documentation</h1>
 
 *  [WinBackupStatusBot description](https://zv09.github.io/WinBackupStatusBot/#description)
 *  [Undestanding workflow](https://zv09.github.io/WinBackupStatusBot/#workflow)
@@ -17,6 +18,7 @@
 
 ## How-to-use
 
+# Contribution 
 
 ## Welcome to GitHub Pages
 
