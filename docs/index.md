@@ -32,18 +32,19 @@ Briefly, look at the script's workflow is shown in the figure below for a cleare
 
 ## Installation
 
-###Get files from GitHub
+### Get files from GitHub
 
 Clone **Powershell WinBackupStatusBot** repository 
 
 1. Open Terminal.
 2. Change the current working directory to the location where you want the cloned directory.
 3. Type `git clone` and then paste the URL you copied earlier or paste it: https://github.com/zv09/WinBackupStatusBot.git
+
 `$ git clone https://github.com/zv09/WinBackupStatusBot.git `
 
 More detail how to clone repository from GitHub you can find in the GitHub's docs section:  [Cloning a repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository)
 
-###Enable Powershell Scripts
+### Enable Powershell Scripts
 
 1. Open PowerShell console as an Administrator role
 2. Type there: `set-executionpolicy remotesigned`
@@ -53,14 +54,14 @@ More detail how to clone repository from GitHub you can find in the GitHub's doc
 
 This will allow you to run Powershell scripts in your Windows system
 
-###Script configuration 
+### Script configuration 
 
 Generally, there are 3 files you need from repository for making things happen
 - WinBackupStatusBotTracking.xml
 - WinBackupStatusBot.ps1
 - TelegramBotSettings-Example.ps1
 
-####Configure Task Scheduler 
+#### Configure Task Scheduler 
 
 1. Open Windows Task Scheduler
 2. In the Task Scheduler tree right click to create a new folder, name it as "Tracking"
@@ -70,7 +71,7 @@ Generally, there are 3 files you need from repository for making things happen
 6. On the "Actions" tab, ensure the parameter of the Powershell action points to the actual location of the WinBackupStatusBot.ps1 file
 7. Click OK and type the correct password for choosen user.
 
-####Configuring Telegram messaging 
+#### Configuring Telegram messaging 
 
 1. Install Telegram on your device or use it already 
 2. Find @botfather and start chat 
@@ -86,7 +87,7 @@ Generally, there are 3 files you need from repository for making things happen
 11. Invite your bot to the group.
 12. Access the following page `https://api.telegram.org/bot<TOKEN>/getUpdates` with insertion your bot's TOKEN between < >  and remove < > characters
 13. Look for the IDs in the page you got. Normally the Group ID will be a numbers preceded by a minus sign. User ID is a positive. 
-14. Open `TelegramBotSettings-Example.ps1` and edit it pasting Group or User ID on your choose. 
+14. Open `TelegramBotSettings-Example.ps1` and edit it pasting Group or User ID on your choose. Copy and paste your token ID there. 
 15. Save `TelegramBotSettings-Example.ps1` as a `TelegramBotSettings.ps1` file. This is neccesary for working the **Powershell WinBackupStatusBot** script corectly, couse it merge this data on its runtime. 
 
 - That's all 
@@ -103,6 +104,7 @@ If in your Task Scheduler the Backup operation is configured to launch once a da
 The script is gradually developing. I will add new features and functionality based on issues need to know about Backup operations.
 
 Whether reporting bugs, discussing improvements and new ideas or writing extensions: Contributions to **Powershell WinBackupStatusBot** are welcome! 
+
 Here's how to get started:
 
 Check for issues or open a issue or open a feature requests.
@@ -113,7 +115,7 @@ Send a pull request to me and wait till it get merged.
 
 Based on communication further I will add you to the Contributors list additionally if you wish.
 
-### Jekyll Themes
+#### Jekyll Themes
 
-Pages site will use the layout and styles from the Jekyll theme(https://github.com/zv09/WinBackupStatusBot/settings/pages).
+Pages site will use the layout and styles from the GitHub's Jekyll theme.
 
