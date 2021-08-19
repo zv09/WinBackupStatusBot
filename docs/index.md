@@ -1,59 +1,119 @@
-# Documentation will be uploaded soon within 2 days ...
+# Description and Documentation
 
-
-
-<h1 align="center"># Description and Documentation</h1>
-
-*  [WinBackupStatusBot description](https://zv09.github.io/WinBackupStatusBot/#description)
+*  [**Powershell WinBackupStatusBot** description](https://zv09.github.io/WinBackupStatusBot/#description)
 *  [Undestanding workflow](https://zv09.github.io/WinBackupStatusBot/#workflow)
 *  [Installation](https://zv09.github.io/WinBackupStatusBot/#installation)
 *  [How-to-use](https://zv09.github.io/WinBackupStatusBot/#how-to-use)
 
 
-## WinBackupStatusBot description
+## **Powershell WinBackupStatusBot** description
+
+**Powershell WinBackupStatusBot** is a Windows scheduled task to run a Powershell script whenever a necessary event appears in the windows event log system.
+
+This Powershell script will parse the event log further to find the event that triggered the task configured and report when backup operation start, is finished, cancelled or interrupted with the error code. 
+
+You will get an instant message in Telegram messenger whenever successfully or unsuccessfully Backup operations try to do their job on your Windows Server or standard Windows 7+ installation. 
+
+That allows you to monitor backup operations on the go and is informed when the unsuccessful result will appear to become aware of something goes wrong in the system. You should check up your Backup logs to manually maintain malfunctions on your Windows machine in this case.
 
 ## Workflow undestanding
 
+Briefly, look at the script's workflow is shown in the figure below for a clearer understanding of how it works on your Windows server.
+
+![WinBackupStatusBotWorkFlow](/docs/WinBackupStatusBotWorkFlow.png)
+
+1. Windows Events engine continuously collect all the events rotating in the Windows machine with unique IDs and statuses
+2. Task Scheduler has a task with XML filter that is triggered when backup service doing its job
+3. Task Scheduler run **Powershell WinBackupStatusBot** script when a task is filtered with EventID related to Backup operations service
+4. **Powershell WinBackupStatusBot** script makes another series of requests to Windows Event Log system to filter this triggered task again to parse additional data like operation result, error codes, etc
+5. **Powershell WinBackupStatusBot** script pack that data, preparing the message  and makes a webhook to send it to the Telegram server
+6. You getting notification based on message format in the **Powershell WinBackupStatusBot** script
+7. Story continuing until Task Scheduler has its active task for filtering. 
+
 ## Installation
+
+###Get files from GitHub
+
+Clone **Powershell WinBackupStatusBot** repository 
+
+1. Open Terminal.
+2. Change the current working directory to the location where you want the cloned directory.
+3. Type `git clone` and then paste the URL you copied earlier or paste it: https://github.com/zv09/WinBackupStatusBot.git
+`$ git clone https://github.com/zv09/WinBackupStatusBot.git `
+
+More detail how to clone repository from GitHub you can find in the GitHub's docs section:  [Cloning a repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository)
+
+###Enable Powershell Scripts
+
+1. Open PowerShell console as an Administrator role
+2. Type there: `set-executionpolicy remotesigned`
+3. Then type Y (or A) and press Enter
+
+![WinBackupStatusBotPSPolicy](/docs/PoweshellExecPolicy.png)
+
+This will allow you to run Powershell scripts in your Windows system
+
+###Script configuration 
+
+Generally, there are 3 files you need from repository for making things happen
+- WinBackupStatusBotTracking.xml
+- WinBackupStatusBot.ps1
+- TelegramBotSettings-Example.ps1
+
+####Configure Task Scheduler 
+
+1. Open Windows Task Scheduler
+2. In the Task Scheduler tree right click to create a new folder, name it as "Tracking"
+3. In this "Tracking" folder Select "Import Task"
+4. Import the `WinBackupStatusBotTracking.xml` file
+5. On the "General" tab, click on "Change User or Group" and select a local administrative user.
+6. On the "Actions" tab, ensure the parameter of the Powershell action points to the actual location of the WinBackupStatusBot.ps1 file
+7. Click OK and type the correct password for choosen user.
+
+####Configuring Telegram messaging 
+
+1. Install Telegram on your device or use it already 
+2. Find @botfather and start chat 
+3. Type `/newbot`
+4. Give your bot a wishful name... like MyBackupBot, etc...
+5. Give your bot a username... e.g. mybackupbot
+6. You will get a message from @BotFather contains creation status, bot URL and providing token to access the HTTP API:  via string with letters and digits
+`YYYYYYYYYY:WWWWWWWWWWWWWWWWWWWWWWWWWWWWW-ZZZZZ`
+7. Keep your token secure and store it safely
+8. Start a chat with your bot and type `/start`
+9. Type a  message for the bot like "Hi"
+10. Exit bot chat and create a Telegram Group conversation. Call it something with the name "Dev-Test" or any other
+11. Invite your bot to the group.
+12. Access the following page `https://api.telegram.org/bot<TOKEN>/getUpdates` with insertion your bot's TOKEN between < >  and remove < > characters
+13. Look for the IDs in the page you got. Normally the Group ID will be a numbers preceded by a minus sign. User ID is a positive. 
+14. Open `TelegramBotSettings-Example.ps1` and edit it pasting Group or User ID on your choose. 
+15. Save `TelegramBotSettings-Example.ps1` as a `TelegramBotSettings.ps1` file. This is neccesary for working the **Powershell WinBackupStatusBot** script corectly, couse it merge this data on its runtime. 
+
+- That's all 
 
 ## How-to-use
 
+The script is useful when you have many Windows Servers in different organizations (installation sites) which are not part of the one Domain infrastructure. And on everyday use you need to be sure that's everything goes well. 
+
+Based on how the time for starting the Backup process is configured in your system, you will get statuses in the Telegram messenger.
+If in your Task Scheduler the Backup operation is configured to launch once a day, during the launch you will receive a message about the start and a message upon completion of the process with the execution status.
+
 # Contribution 
 
-## Welcome to GitHub Pages
+The script is gradually developing. I will add new features and functionality based on issues need to know about Backup operations.
 
-You can use the [editor on GitHub](https://github.com/zv09/WinBackupStatusBot/edit/master/docs/index.md) to maintain and preview the content for your website in Markdown files.
+Whether reporting bugs, discussing improvements and new ideas or writing extensions: Contributions to **Powershell WinBackupStatusBot** are welcome! 
+Here's how to get started:
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Check for issues or open a issue or open a feature requests.
+Fork the repository on Github
+Create a new branch off the master branch.
+Write a test which shows that the bug was fixed or that the feature works as expected.
+Send a pull request to me and wait till it get merged.
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+Based on communication further I will add you to the Contributors list additionally if you wish.
 
 ### Jekyll Themes
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/zv09/WinBackupStatusBot/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+Pages site will use the layout and styles from the Jekyll theme(https://github.com/zv09/WinBackupStatusBot/settings/pages).
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
