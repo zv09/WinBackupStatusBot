@@ -39,9 +39,9 @@ Clone **Powershell WinBackupStatusBot** repository
 1. Open Terminal.
 2. Change the current working directory to the location where you want the cloned directory.
 3. Type `git clone` and then paste the URL you copied earlier or paste it: https://github.com/zv09/WinBackupStatusBot.git
-
-`$ git clone https://github.com/zv09/WinBackupStatusBot.git `
-
+	
+	$ git clone https://github.com/zv09/WinBackupStatusBot.git 
+	
 More detail how to clone repository from GitHub you can find in the GitHub's docs section:  [Cloning a repository](https://docs.github.com/en/github/creating-cloning-and-archiving-repositories/cloning-a-repository-from-github/cloning-a-repository)
 
 ### Enable Powershell Scripts
