@@ -20,7 +20,7 @@ That allows you to monitor backup operations on the go and is informed when the 
 
 Briefly, look at the script's workflow is shown in the figure below for a clearer understanding of how it works on your Windows server.
 
-![WinBackupStatusBotWorkFlow](/docs/WinBackupStatusBotWorkFlow.png)
+![WinBackupStatusBotWorkFlow](https://zv09.github.io//WinBackupStatusBot/docs/WinBackupStatusBotWorkFlow.png)
 
 1. Windows Events engine continuously collect all the events rotating in the Windows machine with unique IDs and statuses
 2. Task Scheduler has a task with XML filter that is triggered when backup service doing its job
@@ -57,7 +57,7 @@ More detail how to clone repository from GitHub you can find in the GitHub's doc
 
 3. Then type Y (or A) and press Enter
 
-![WinBackupStatusBotPSPolicy](/docs/PoweshellExecPolicy.png)
+![WinBackupStatusBotPSPolicy](https://zv09.github.io/WinBackupStatusBot/docs/PoweshellExecPolicy.png)
 
 This will allow you to run Powershell scripts in your Windows system
 
