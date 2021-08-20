@@ -24,7 +24,7 @@
 *  [Installation](https://zv09.github.io/WinBackupStatusBot/#installation)
 *  [How-to-use](https://zv09.github.io/WinBackupStatusBot/#how-to-use)
 
-[Markdown Index.md](https://github.com/zv09/WinBackupStatusBot/blob/dc9ca55a22695a535bcd00d551b3972648621cc0/docs/index.md)
+[Markdown Index.md for Documentation](https://github.com/zv09/WinBackupStatusBot/blob/dc9ca55a22695a535bcd00d551b3972648621cc0/docs/index.md)
 
 ### License
 
