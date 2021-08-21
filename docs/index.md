@@ -1,5 +1,5 @@
 # Description and Documentation
-[![docs](https://img.shields.io/badge/Docs:-HTML-blue?style=plastic&logo=CSS3)](https://zv09.github.io/WinBackupStatusBot/#documentation)  [![docs](https://img.shields.io/badge/Docs:-Markdown%20Index.md-yellow?style=plastic&logo=Mardown)](docs/index.md)
+[![docs](https://img.shields.io/badge/Docs:-HTML-blue?style=plastic&logo=CSS3)](https://zv09.github.io/WinBackupStatusBot/#documentation) 
 
 *  [**Powershell WinBackupStatusBot** description](#powershell-winbackupstatusbot-description)
 *  [Undestanding Workflow](#undestanding-workflow)
