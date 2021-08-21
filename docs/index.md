@@ -1,13 +1,13 @@
 # Description and Documentation
 [![docs](https://img.shields.io/badge/Docs:-HTML-blue?style=plastic&logo=CSS3)](https://zv09.github.io/WinBackupStatusBot/#Documentation)  [![docs](https://img.shields.io/badge/Docs:-Markdown%20Index.md-yellow?style=plastic&logo=Mardown)](docs/index.md)
 
-*  [**Powershell WinBackupStatusBot** description][description]
+*  [**Powershell WinBackupStatusBot** description][#description]
 *  [Undestanding workflow](#workflow)
 *  [Installation](#installation)
 *  [How-to-use](#how-to-use)
 
 
-[description]: ## **Powershell WinBackupStatusBot** description
+[## **Powershell WinBackupStatusBot** description] {#description} 
 
 **Powershell WinBackupStatusBot** is a Windows scheduled task to run a Powershell script whenever a necessary event appears in the windows event log system.
 
