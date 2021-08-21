@@ -7,7 +7,7 @@
 *  [How-to-use](#how-to-use)
 
 
-[## **Powershell WinBackupStatusBot** description]{#description} 
+## **Powershell WinBackupStatusBot** description[]]{#description} 
 
 **Powershell WinBackupStatusBot** is a Windows scheduled task to run a Powershell script whenever a necessary event appears in the windows event log system.
 
