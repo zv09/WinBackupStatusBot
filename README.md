@@ -20,8 +20,8 @@
 ### [Description and Documentation](https://zv09.github.io/WinBackupStatusBot/#documentation)   
 [![docs](https://img.shields.io/badge/Docs:-HTML-blue?style=plastic&logo=CSS3)](https://zv09.github.io/WinBackupStatusBot/#documentation)  [![docs](https://img.shields.io/badge/Docs:-Markdown%20Index.md-yellow?style=plastic&logo=Mardown)](docs/index.md)
 
-*  [WinBackupStatusBot description](https://zv09.github.io/WinBackupStatusBot/#description)
-*  [ Workflow undestanding](https://zv09.github.io/WinBackupStatusBot/#workflow)
+*  [WinBackupStatusBot description](https://zv09.github.io/WinBackupStatusBot/#powershell-winbackupstatusbot-description)
+*  [Undestanding Workflow](https://zv09.github.io/WinBackupStatusBot/#undestanding-workflow)
 *  [Installation](https://zv09.github.io/WinBackupStatusBot/#installation)
 *  [How-to-use](https://zv09.github.io/WinBackupStatusBot/#how-to-use)
 
