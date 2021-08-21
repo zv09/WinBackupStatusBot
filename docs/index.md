@@ -1,4 +1,5 @@
 # Description and Documentation
+[![docs](https://img.shields.io/badge/Docs:-HTML-blue?style=plastic&logo=CSS3)](https://zv09.github.io/WinBackupStatusBot/#Documentation)  [![docs](https://img.shields.io/badge/Docs:-Markdown%20Index.md-yellow?style=plastic&logo=Mardown)](docs/index.md)
 
 *  [**Powershell WinBackupStatusBot** description](https://zv09.github.io/WinBackupStatusBot/#description)
 *  [Undestanding workflow](https://zv09.github.io/WinBackupStatusBot/#workflow)
@@ -6,7 +7,7 @@
 *  [How-to-use](https://zv09.github.io/WinBackupStatusBot/#how-to-use)
 
 
-## **Powershell WinBackupStatusBot** description
+[description]## **Powershell WinBackupStatusBot** description
 
 **Powershell WinBackupStatusBot** is a Windows scheduled task to run a Powershell script whenever a necessary event appears in the windows event log system.
 
@@ -16,7 +17,7 @@ You will get an instant message in Telegram messenger whenever successfully or u
 
 That allows you to monitor backup operations on the go and is informed when the unsuccessful result will appear to become aware of something goes wrong in the system. You should check up your Backup logs to manually maintain malfunctions on your Windows machine in this case.
 
-## Workflow undestanding
+[workflow]## Workflow undestanding
 
 Briefly, look at the script's workflow is shown in the figure below for a clearer understanding of how it works on your Windows server.
 
@@ -30,7 +31,7 @@ Briefly, look at the script's workflow is shown in the figure below for a cleare
 6. You getting notification based on message format in the **Powershell WinBackupStatusBot** script
 7. Story continuing until Task Scheduler has its active task for filtering. 
 
-## Installation
+[installation]## Installation
 
 ### Get files from GitHub
 
@@ -99,14 +100,14 @@ Generally, there are 3 files you need from repository for making things happen
 
 - That's all 
 
-## How-to-use
+[how-to-use]## How-to-use
 
 The script is useful when you have many Windows Servers in different organizations (installation sites) which are not part of the one Domain infrastructure. And on everyday use you need to be sure that's everything goes well. 
 
 Based on how the time for starting the Backup process is configured in your system, you will get statuses in the Telegram messenger.
 If in your Task Scheduler the Backup operation is configured to launch once a day, during the launch you will receive a message about the start and a message upon completion of the process with the execution status.
 
-# Contribution 
+[contribution]# Contribution 
 
 The script is gradually developing. I will add new features and functionality based on issues need to know about Backup operations.
 
