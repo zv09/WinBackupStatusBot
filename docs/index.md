@@ -1,9 +1,10 @@
 # Description and Documentation
+[![docs](https://img.shields.io/badge/Docs:-HTML-blue?style=plastic&logo=CSS3)](https://zv09.github.io/WinBackupStatusBot/#documentation)  [![docs](https://img.shields.io/badge/Docs:-Markdown%20Index.md-yellow?style=plastic&logo=Mardown)](docs/index.md)
 
-*  [**Powershell WinBackupStatusBot** description](https://zv09.github.io/WinBackupStatusBot/#description)
-*  [Undestanding workflow](https://zv09.github.io/WinBackupStatusBot/#workflow)
-*  [Installation](https://zv09.github.io/WinBackupStatusBot/#installation)
-*  [How-to-use](https://zv09.github.io/WinBackupStatusBot/#how-to-use)
+*  [**Powershell WinBackupStatusBot** description](#powershell-winbackupstatusbot-description)
+*  [Undestanding Workflow](#undestanding-workflow)
+*  [Installation](#installation)
+*  [How-to-use](#how-to-use)
 
 
 ## **Powershell WinBackupStatusBot** description
@@ -16,7 +17,7 @@ You will get an instant message in Telegram messenger whenever successfully or u
 
 That allows you to monitor backup operations on the go and is informed when the unsuccessful result will appear to become aware of something goes wrong in the system. You should check up your Backup logs to manually maintain malfunctions on your Windows machine in this case.
 
-## Workflow undestanding
+## Undestanding Workflow
 
 Briefly, look at the script's workflow is shown in the figure below for a clearer understanding of how it works on your Windows server.
 
