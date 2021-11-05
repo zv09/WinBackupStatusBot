@@ -1,2 +1,8 @@
 **Version v1.0.0 [11 Aug 2021]**
 - Initial Public Release.
+	Filtering events in Windows Events using XML query
+	Catch backup event when it appear and recognize it status: 
+		- Backup started at time
+		- Backup finished at time
+		- Finished with error code if fail
+	Send it to Telegram immediately with aporiate status
