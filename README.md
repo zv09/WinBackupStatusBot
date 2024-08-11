@@ -1,5 +1,21 @@
 # PowerShell WinBackupStatusBot
 
+[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
+![GitHub Tag](https://img.shields.io/github/v/tag/zv09/WinBackupStatusBot)
+![GitHub Issues or Pull Requests by label](https://img.shields.io/github/issues/zv09/WinBackupStatusBot/Github?style=flat&logo=github)
+![GitHub last commit](https://img.shields.io/github/last-commit/zv09/WinBackupStatusBot)
+
+> **Disclaimer:** This project is only for personal learning and communication, please do not use it for illegal purposes, please do not use it in a commercial production environment
+
+**If this project is helpful to you, you may wish to give it a**:star2:
+
+...and donate some:
+- TON (V4R2): `UQCpl-TjWMCfU49RrkyYmXnlI2XqmB9Ggm79ViLdL7_oeSwP`
+- USDT (TON/W5): `UQCYsdxtnvkj_4835iWzLjKjLNlH60YjwDTe5-qcveT5COZv`
+- USDT (BEP20): `0x3eb0F1a28Fc22022c6D871eCE0476C33296dFFCf`
+- USDT (TRC20): `TEMU7xgvHMKC2VowLzcaDqgVmamzZKwDxL`
+
+
 ### What is the PowerShell WinBackupStatusBot?
  Sending instant notifications on Telegram chat (Android/iOS/Windows/macOS X/Linux) with SUCCESS or FAILED Windows backup operations depends on its Events workflow.
 
